@@ -1,0 +1,6 @@
+org\apache\hertzbeat\warehouse\store\RedisDataStorageTest.class
+org\apache\hertzbeat\warehouse\controller\MetricsDataControllerTest.class
+org\apache\hertzbeat\warehouse\store\MemoryDataStorageTest.class
+org\apache\hertzbeat\warehouse\WarehouseWorkerPoolTest.class
+org\apache\hertzbeat\warehouse\store\MetricsDataRedisCodecTest.class
+org\apache\hertzbeat\warehouse\store\TdEngineDataStorageTest.class

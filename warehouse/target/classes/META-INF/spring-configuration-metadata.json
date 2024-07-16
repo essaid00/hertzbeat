@@ -1,0 +1,282 @@
+{
+  "groups": [
+    {
+      "name": "warehouse.store.greptime",
+      "type": "org.apache.hertzbeat.warehouse.store.history.greptime.GreptimeProperties",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.greptime.GreptimeProperties"
+    },
+    {
+      "name": "warehouse.store.influxdb",
+      "type": "org.apache.hertzbeat.warehouse.store.history.influxdb.InfluxdbProperties",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.influxdb.InfluxdbProperties"
+    },
+    {
+      "name": "warehouse.store.iot-db",
+      "type": "org.apache.hertzbeat.warehouse.store.history.iotdb.IotDbProperties",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.iotdb.IotDbProperties"
+    },
+    {
+      "name": "warehouse.store.jpa",
+      "type": "org.apache.hertzbeat.warehouse.store.history.jpa.JpaProperties",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.jpa.JpaProperties"
+    },
+    {
+      "name": "warehouse.store.memory",
+      "type": "org.apache.hertzbeat.warehouse.store.realtime.memory.MemoryProperties",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.realtime.memory.MemoryProperties"
+    },
+    {
+      "name": "warehouse.store.redis",
+      "type": "org.apache.hertzbeat.warehouse.store.realtime.redis.RedisProperties",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.realtime.redis.RedisProperties"
+    },
+    {
+      "name": "warehouse.store.td-engine",
+      "type": "org.apache.hertzbeat.warehouse.store.history.tdengine.TdEngineProperties",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.tdengine.TdEngineProperties"
+    },
+    {
+      "name": "warehouse.store.victoria-metrics",
+      "type": "org.apache.hertzbeat.warehouse.store.history.vm.VictoriaMetricsProperties",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.vm.VictoriaMetricsProperties"
+    },
+    {
+      "name": "warehouse.store.victoria-metrics.cluster",
+      "type": "org.apache.hertzbeat.warehouse.store.history.vm.VictoriaMetricsClusterProperties",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.vm.VictoriaMetricsClusterProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "warehouse.store.greptime.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.greptime.GreptimeProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "warehouse.store.greptime.endpoint",
+      "type": "java.lang.String",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.greptime.GreptimeProperties",
+      "defaultValue": "127.0.0.1:4001"
+    },
+    {
+      "name": "warehouse.store.greptime.password",
+      "type": "java.lang.String",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.greptime.GreptimeProperties"
+    },
+    {
+      "name": "warehouse.store.greptime.username",
+      "type": "java.lang.String",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.greptime.GreptimeProperties"
+    },
+    {
+      "name": "warehouse.store.influxdb.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.influxdb.InfluxdbProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "warehouse.store.influxdb.expire-time",
+      "type": "java.lang.String",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.influxdb.InfluxdbProperties",
+      "defaultValue": "30d"
+    },
+    {
+      "name": "warehouse.store.influxdb.password",
+      "type": "java.lang.String",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.influxdb.InfluxdbProperties"
+    },
+    {
+      "name": "warehouse.store.influxdb.replication",
+      "type": "java.lang.Integer",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.influxdb.InfluxdbProperties",
+      "defaultValue": 1
+    },
+    {
+      "name": "warehouse.store.influxdb.server-url",
+      "type": "java.lang.String",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.influxdb.InfluxdbProperties"
+    },
+    {
+      "name": "warehouse.store.influxdb.username",
+      "type": "java.lang.String",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.influxdb.InfluxdbProperties"
+    },
+    {
+      "name": "warehouse.store.iot-db.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.iotdb.IotDbProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "warehouse.store.iot-db.expire-time",
+      "type": "java.lang.String",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.iotdb.IotDbProperties"
+    },
+    {
+      "name": "warehouse.store.iot-db.host",
+      "type": "java.lang.String",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.iotdb.IotDbProperties",
+      "defaultValue": "127.0.0.1"
+    },
+    {
+      "name": "warehouse.store.iot-db.node-urls",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.iotdb.IotDbProperties"
+    },
+    {
+      "name": "warehouse.store.iot-db.password",
+      "type": "java.lang.String",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.iotdb.IotDbProperties"
+    },
+    {
+      "name": "warehouse.store.iot-db.query-timeout-in-ms",
+      "type": "java.lang.Long",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.iotdb.IotDbProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "warehouse.store.iot-db.rpc-port",
+      "type": "java.lang.Integer",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.iotdb.IotDbProperties",
+      "defaultValue": 6667
+    },
+    {
+      "name": "warehouse.store.iot-db.username",
+      "type": "java.lang.String",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.iotdb.IotDbProperties"
+    },
+    {
+      "name": "warehouse.store.iot-db.zone-id",
+      "type": "java.time.ZoneId",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.iotdb.IotDbProperties"
+    },
+    {
+      "name": "warehouse.store.jpa.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.jpa.JpaProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "warehouse.store.jpa.expire-time",
+      "type": "java.lang.String",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.jpa.JpaProperties",
+      "defaultValue": "1h"
+    },
+    {
+      "name": "warehouse.store.jpa.max-history-record-num",
+      "type": "java.lang.Integer",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.jpa.JpaProperties",
+      "defaultValue": 20000
+    },
+    {
+      "name": "warehouse.store.memory.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.realtime.memory.MemoryProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "warehouse.store.memory.init-size",
+      "type": "java.lang.Integer",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.realtime.memory.MemoryProperties",
+      "defaultValue": 1024
+    },
+    {
+      "name": "warehouse.store.redis.db",
+      "type": "java.lang.Integer",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.realtime.redis.RedisProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "warehouse.store.redis.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.realtime.redis.RedisProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "warehouse.store.redis.host",
+      "type": "java.lang.String",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.realtime.redis.RedisProperties",
+      "defaultValue": "127.0.0.1"
+    },
+    {
+      "name": "warehouse.store.redis.password",
+      "type": "java.lang.String",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.realtime.redis.RedisProperties",
+      "defaultValue": "yourpassword"
+    },
+    {
+      "name": "warehouse.store.redis.port",
+      "type": "java.lang.Integer",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.realtime.redis.RedisProperties",
+      "defaultValue": 6379
+    },
+    {
+      "name": "warehouse.store.td-engine.driver-class-name",
+      "type": "java.lang.String",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.tdengine.TdEngineProperties",
+      "defaultValue": "com.taosdata.jdbc.rs.RestfulDriver"
+    },
+    {
+      "name": "warehouse.store.td-engine.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.tdengine.TdEngineProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "warehouse.store.td-engine.password",
+      "type": "java.lang.String",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.tdengine.TdEngineProperties"
+    },
+    {
+      "name": "warehouse.store.td-engine.table-str-column-define-max-length",
+      "type": "java.lang.Integer",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.tdengine.TdEngineProperties",
+      "defaultValue": 200
+    },
+    {
+      "name": "warehouse.store.td-engine.url",
+      "type": "java.lang.String",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.tdengine.TdEngineProperties",
+      "defaultValue": "jdbc:TAOS-RS:\/\/localhost:6041\/demo"
+    },
+    {
+      "name": "warehouse.store.td-engine.username",
+      "type": "java.lang.String",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.tdengine.TdEngineProperties"
+    },
+    {
+      "name": "warehouse.store.victoria-metrics.cluster.insert",
+      "type": "org.apache.hertzbeat.warehouse.store.history.vm.VictoriaMetricsInsertProperties",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.vm.VictoriaMetricsClusterProperties"
+    },
+    {
+      "name": "warehouse.store.victoria-metrics.cluster.select",
+      "type": "org.apache.hertzbeat.warehouse.store.history.vm.VictoriaMetricsSelectProperties",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.vm.VictoriaMetricsClusterProperties"
+    },
+    {
+      "name": "warehouse.store.victoria-metrics.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.vm.VictoriaMetricsProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "warehouse.store.victoria-metrics.password",
+      "type": "java.lang.String",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.vm.VictoriaMetricsProperties"
+    },
+    {
+      "name": "warehouse.store.victoria-metrics.url",
+      "type": "java.lang.String",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.vm.VictoriaMetricsProperties",
+      "defaultValue": "http:\/\/localhost:8428"
+    },
+    {
+      "name": "warehouse.store.victoria-metrics.username",
+      "type": "java.lang.String",
+      "sourceType": "org.apache.hertzbeat.warehouse.store.history.vm.VictoriaMetricsProperties"
+    }
+  ],
+  "hints": []
+}

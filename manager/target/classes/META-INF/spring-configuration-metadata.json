@@ -1,0 +1,79 @@
+{
+  "groups": [
+    {
+      "name": "scheduler",
+      "type": "org.apache.hertzbeat.manager.scheduler.SchedulerProperties",
+      "sourceType": "org.apache.hertzbeat.manager.scheduler.SchedulerProperties"
+    },
+    {
+      "name": "scheduler.server",
+      "type": "org.apache.hertzbeat.manager.scheduler.SchedulerProperties$ServerProperties",
+      "sourceType": "org.apache.hertzbeat.manager.scheduler.SchedulerProperties",
+      "sourceMethod": "getServer()"
+    },
+    {
+      "name": "security",
+      "type": "org.apache.hertzbeat.manager.security.property.SecurityProperties",
+      "sourceType": "org.apache.hertzbeat.manager.security.property.SecurityProperties"
+    },
+    {
+      "name": "security.jwt",
+      "type": "org.apache.hertzbeat.manager.security.property.SecurityProperties$JwtProperty",
+      "sourceType": "org.apache.hertzbeat.manager.security.property.SecurityProperties"
+    },
+    {
+      "name": "status",
+      "type": "org.apache.hertzbeat.manager.config.StatusProperties",
+      "sourceType": "org.apache.hertzbeat.manager.config.StatusProperties"
+    },
+    {
+      "name": "status.calculate",
+      "type": "org.apache.hertzbeat.manager.config.StatusProperties$CalculateProperties",
+      "sourceType": "org.apache.hertzbeat.manager.config.StatusProperties",
+      "sourceMethod": "getCalculate()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "scheduler.server.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.hertzbeat.manager.scheduler.SchedulerProperties$ServerProperties"
+    },
+    {
+      "name": "scheduler.server.idle-state-event-trigger-time",
+      "type": "java.lang.Integer",
+      "description": "an IdleStateEvent whose state is IdleState.ALL_IDLE will be triggered when neither read nor write  was performed for the specified period of time. unit: s",
+      "sourceType": "org.apache.hertzbeat.manager.scheduler.SchedulerProperties$ServerProperties"
+    },
+    {
+      "name": "scheduler.server.port",
+      "type": "java.lang.Integer",
+      "sourceType": "org.apache.hertzbeat.manager.scheduler.SchedulerProperties$ServerProperties"
+    },
+    {
+      "name": "security.ignore-urls",
+      "type": "java.util.List<java.lang.String>",
+      "description": "白名单 URL 集合",
+      "sourceType": "org.apache.hertzbeat.manager.security.property.SecurityProperties"
+    },
+    {
+      "name": "security.jwt.key",
+      "type": "java.lang.String",
+      "description": "JWT 秘钥",
+      "sourceType": "org.apache.hertzbeat.manager.security.property.SecurityProperties$JwtProperty"
+    },
+    {
+      "name": "security.jwt.ttl",
+      "type": "java.lang.Long",
+      "description": "JWT 过期时间",
+      "sourceType": "org.apache.hertzbeat.manager.security.property.SecurityProperties$JwtProperty"
+    },
+    {
+      "name": "status.calculate.interval",
+      "type": "java.lang.Integer",
+      "description": "the component status calculate interval(s)",
+      "sourceType": "org.apache.hertzbeat.manager.config.StatusProperties$CalculateProperties"
+    }
+  ],
+  "hints": []
+}

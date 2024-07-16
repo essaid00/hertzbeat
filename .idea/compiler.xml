@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="hertzbeat-remoting" />
+        <module name="hertzbeat-warehouse" />
+        <module name="hertzbeat-alerter" />
+        <module name="hertzbeat-common" />
+        <module name="hertzbeat-manager" />
+        <module name="hertzbeat-plugin" />
+        <module name="hertzbeat-push" />
+        <module name="hertzbeat-collector" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="hertzbeat" options="-parameters" />
+      <module name="hertzbeat-alerter" options="-parameters" />
+      <module name="hertzbeat-collector" options="-parameters" />
+      <module name="hertzbeat-common" options="-parameters" />
+      <module name="hertzbeat-manager" options="-parameters" />
+      <module name="hertzbeat-plugin" options="-parameters" />
+      <module name="hertzbeat-push" options="-parameters" />
+      <module name="hertzbeat-remoting" options="-parameters" />
+      <module name="hertzbeat-warehouse" options="-parameters" />
+    </option>
+  </component>
+</project>

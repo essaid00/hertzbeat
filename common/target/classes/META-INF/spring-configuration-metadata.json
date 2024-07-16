@@ -1,0 +1,131 @@
+{
+  "groups": [
+    {
+      "name": "common",
+      "type": "org.apache.hertzbeat.common.config.CommonProperties",
+      "sourceType": "org.apache.hertzbeat.common.config.CommonProperties"
+    },
+    {
+      "name": "common.queue",
+      "type": "org.apache.hertzbeat.common.config.CommonProperties$DataQueueProperties",
+      "sourceType": "org.apache.hertzbeat.common.config.CommonProperties",
+      "sourceMethod": "getQueue()"
+    },
+    {
+      "name": "common.queue.kafka",
+      "type": "org.apache.hertzbeat.common.config.CommonProperties$KafkaProperties",
+      "sourceType": "org.apache.hertzbeat.common.config.CommonProperties$DataQueueProperties",
+      "sourceMethod": "getKafka()"
+    },
+    {
+      "name": "common.sms",
+      "type": "org.apache.hertzbeat.common.config.CommonProperties$SmsProperties",
+      "sourceType": "org.apache.hertzbeat.common.config.CommonProperties",
+      "sourceMethod": "getSms()"
+    },
+    {
+      "name": "common.sms.ali-yun",
+      "type": "org.apache.hertzbeat.common.config.CommonProperties$AliYunSmsProperties",
+      "sourceType": "org.apache.hertzbeat.common.config.CommonProperties$SmsProperties",
+      "sourceMethod": "getAliYun()"
+    },
+    {
+      "name": "common.sms.tencent",
+      "type": "org.apache.hertzbeat.common.config.CommonProperties$TencentSmsProperties",
+      "sourceType": "org.apache.hertzbeat.common.config.CommonProperties$SmsProperties",
+      "sourceMethod": "getTencent()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "common.queue.kafka.alerts-data-topic",
+      "type": "java.lang.String",
+      "description": "alerts data topic",
+      "sourceType": "org.apache.hertzbeat.common.config.CommonProperties$KafkaProperties"
+    },
+    {
+      "name": "common.queue.kafka.metrics-data-topic",
+      "type": "java.lang.String",
+      "description": "metrics data topic",
+      "sourceType": "org.apache.hertzbeat.common.config.CommonProperties$KafkaProperties"
+    },
+    {
+      "name": "common.queue.kafka.servers",
+      "type": "java.lang.String",
+      "description": "kafka's connection server url",
+      "sourceType": "org.apache.hertzbeat.common.config.CommonProperties$KafkaProperties"
+    },
+    {
+      "name": "common.queue.type",
+      "type": "org.apache.hertzbeat.common.config.CommonProperties$QueueType",
+      "sourceType": "org.apache.hertzbeat.common.config.CommonProperties$DataQueueProperties"
+    },
+    {
+      "name": "common.secret",
+      "type": "java.lang.String",
+      "description": "secret key for password aes entry, must 16 bits",
+      "sourceType": "org.apache.hertzbeat.common.config.CommonProperties"
+    },
+    {
+      "name": "common.sms.ali-yun.app-id",
+      "type": "java.lang.String",
+      "description": "SMS app id",
+      "sourceType": "org.apache.hertzbeat.common.config.CommonProperties$AliYunSmsProperties"
+    },
+    {
+      "name": "common.sms.ali-yun.secret-id",
+      "type": "java.lang.String",
+      "description": "Aliyun account access key id",
+      "sourceType": "org.apache.hertzbeat.common.config.CommonProperties$AliYunSmsProperties"
+    },
+    {
+      "name": "common.sms.ali-yun.secret-key",
+      "type": "java.lang.String",
+      "description": "Ali Cloud account access key",
+      "sourceType": "org.apache.hertzbeat.common.config.CommonProperties$AliYunSmsProperties"
+    },
+    {
+      "name": "common.sms.ali-yun.sign-name",
+      "type": "java.lang.String",
+      "description": "SMS signature",
+      "sourceType": "org.apache.hertzbeat.common.config.CommonProperties$AliYunSmsProperties"
+    },
+    {
+      "name": "common.sms.ali-yun.template-id",
+      "type": "java.lang.String",
+      "description": "ID of the SMS template",
+      "sourceType": "org.apache.hertzbeat.common.config.CommonProperties$AliYunSmsProperties"
+    },
+    {
+      "name": "common.sms.tencent.app-id",
+      "type": "java.lang.String",
+      "description": "SMS app id",
+      "sourceType": "org.apache.hertzbeat.common.config.CommonProperties$TencentSmsProperties"
+    },
+    {
+      "name": "common.sms.tencent.secret-id",
+      "type": "java.lang.String",
+      "description": "Tencent cloud account secret id",
+      "sourceType": "org.apache.hertzbeat.common.config.CommonProperties$TencentSmsProperties"
+    },
+    {
+      "name": "common.sms.tencent.secret-key",
+      "type": "java.lang.String",
+      "description": "Tencent cloud account secret key",
+      "sourceType": "org.apache.hertzbeat.common.config.CommonProperties$TencentSmsProperties"
+    },
+    {
+      "name": "common.sms.tencent.sign-name",
+      "type": "java.lang.String",
+      "description": "SMS signature",
+      "sourceType": "org.apache.hertzbeat.common.config.CommonProperties$TencentSmsProperties"
+    },
+    {
+      "name": "common.sms.tencent.template-id",
+      "type": "java.lang.String",
+      "description": "SMS template ID",
+      "sourceType": "org.apache.hertzbeat.common.config.CommonProperties$TencentSmsProperties"
+    }
+  ],
+  "hints": []
+}

@@ -1,0 +1,72 @@
+spring:
+  jackson:
+    ## 默认序列化时间格式
+    date-format: yyyy-MM-dd HH:mm:ss
+    ## 默认序列化时区
+    time-zone: GMT+8
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hertzbeat?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&autoReconnect=true&allowMultiQueries=true
+    username: root
+    password:
+  data:
+    redis:
+      database: 0
+      enable: true
+      host: 127.0.0.1
+      port: 6377
+      password: yourpassword
+      timeout: 10s
+      lettuce:
+        pool:
+          # 连接池最大连接数 默认8 ，负数表示没有限制
+          max-active: 8
+          # 连接池最大阻塞等待时间（使用负值表示没有限制） 默认-1
+          max-wait: -1
+          # 连接池中的最大空闲连接 默认8
+          max-idle: 8
+          # 连接池中的最小空闲连接 默认0
+          min-idle: 0
+  cache:
+    enabled: false
+    # 缓存类型 redis、none(不使用缓存)
+    type: redis
+    # 缓存时间(单位：ms)
+    redis:
+      time-to-live: 3600000
+      # 缓存null值，防止缓存穿透
+      cache-null-values: true
+security:
+  jwt:
+    # JWT 秘钥
+    key: SecretKey012345678901234567890123456789012345678901234567890123456789
+    # JWT 有效期(单位：秒)
+    ttl: 7200
+  ignore-urls:
+    - /v3/api-docs/**
+    - /doc.html
+    - /swagger-resources/**
+    - /webjars/**
+    - /*.html
+    - /*.json
+    - /*.png
+    - /*.pdf
+    - /swagger-ui/**
+    - /swagger-ui.html
+    - /api/v1/auth/captcha
+    - /api/account/auth/login
+    - /ws/**
+    - /ws-app/**
+file:
+  directory= classpath:static:
+logging:
+  level:
+    org:
+      springframework:
+        boot:
+          web:
+            servlet: DEBUG
+            servlet.filter: DEBUG
+        web: DEBUG
+        web.servlet.resource: DEBUG

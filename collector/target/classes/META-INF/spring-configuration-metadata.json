@@ -1,0 +1,88 @@
+{
+  "groups": [
+    {
+      "name": "collector.dispatch",
+      "type": "org.apache.hertzbeat.collector.dispatch.DispatchProperties",
+      "sourceType": "org.apache.hertzbeat.collector.dispatch.DispatchProperties"
+    },
+    {
+      "name": "collector.dispatch.entrance",
+      "type": "org.apache.hertzbeat.collector.dispatch.DispatchProperties$EntranceProperties",
+      "sourceType": "org.apache.hertzbeat.collector.dispatch.DispatchProperties",
+      "sourceMethod": "getEntrance()"
+    },
+    {
+      "name": "collector.dispatch.entrance.netty",
+      "type": "org.apache.hertzbeat.collector.dispatch.DispatchProperties$EntranceProperties$NettyProperties",
+      "sourceType": "org.apache.hertzbeat.collector.dispatch.DispatchProperties$EntranceProperties",
+      "sourceMethod": "getNetty()"
+    },
+    {
+      "name": "collector.dispatch.export",
+      "type": "org.apache.hertzbeat.collector.dispatch.DispatchProperties$ExportProperties",
+      "sourceType": "org.apache.hertzbeat.collector.dispatch.DispatchProperties",
+      "sourceMethod": "getExport()"
+    },
+    {
+      "name": "collector.dispatch.export.kafka",
+      "type": "org.apache.hertzbeat.collector.dispatch.DispatchProperties$ExportProperties$KafkaProperties",
+      "sourceType": "org.apache.hertzbeat.collector.dispatch.DispatchProperties$ExportProperties",
+      "sourceMethod": "getKafka()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "collector.dispatch.entrance.netty.enabled",
+      "type": "java.lang.Boolean",
+      "description": "whether netty scheduling is started",
+      "sourceType": "org.apache.hertzbeat.collector.dispatch.DispatchProperties$EntranceProperties$NettyProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "collector.dispatch.entrance.netty.identity",
+      "type": "java.lang.String",
+      "description": "this collector unique identity default is the host name",
+      "sourceType": "org.apache.hertzbeat.collector.dispatch.DispatchProperties$EntranceProperties$NettyProperties"
+    },
+    {
+      "name": "collector.dispatch.entrance.netty.manager-host",
+      "type": "java.lang.String",
+      "description": "connect cluster master host",
+      "sourceType": "org.apache.hertzbeat.collector.dispatch.DispatchProperties$EntranceProperties$NettyProperties"
+    },
+    {
+      "name": "collector.dispatch.entrance.netty.manager-port",
+      "type": "java.lang.Integer",
+      "description": "connect cluster master port",
+      "sourceType": "org.apache.hertzbeat.collector.dispatch.DispatchProperties$EntranceProperties$NettyProperties",
+      "defaultValue": 1158
+    },
+    {
+      "name": "collector.dispatch.entrance.netty.mode",
+      "type": "java.lang.String",
+      "description": "this collector mode public: for public network, support cluster private: for private network, support cloud-edge",
+      "sourceType": "org.apache.hertzbeat.collector.dispatch.DispatchProperties$EntranceProperties$NettyProperties"
+    },
+    {
+      "name": "collector.dispatch.export.kafka.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether the kafka data export is started kafka数据出口是否启动",
+      "sourceType": "org.apache.hertzbeat.collector.dispatch.DispatchProperties$ExportProperties$KafkaProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "collector.dispatch.export.kafka.servers",
+      "type": "java.lang.String",
+      "description": "kafka's connection server url kafka的连接服务器url",
+      "sourceType": "org.apache.hertzbeat.collector.dispatch.DispatchProperties$ExportProperties$KafkaProperties",
+      "defaultValue": "http:\/\/127.0.0.1:2379"
+    },
+    {
+      "name": "collector.dispatch.export.kafka.topic",
+      "type": "java.lang.String",
+      "description": "Topic name to send data to 发送数据的topic名称",
+      "sourceType": "org.apache.hertzbeat.collector.dispatch.DispatchProperties$ExportProperties$KafkaProperties"
+    }
+  ],
+  "hints": []
+}
