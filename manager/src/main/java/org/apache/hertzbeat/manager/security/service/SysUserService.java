@@ -19,5 +19,7 @@ public interface SysUserService {
     SysUser getUserAuthInfo(String username);
 
 
+    SysUser getUserByName(String username);
 
+    SysUser getCurrentUserInfo();
 }

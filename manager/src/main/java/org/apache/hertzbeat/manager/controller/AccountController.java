@@ -20,9 +20,12 @@ package org.apache.hertzbeat.manager.controller;
 import static org.apache.hertzbeat.common.constants.CommonConstants.MONITOR_LOGIN_FAILED_CODE;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
+import cn.hutool.jwt.JWTUtil;
+import com.alibaba.fastjson.JSONObject;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.util.HashMap;
@@ -36,8 +39,11 @@ import org.apache.hertzbeat.common.util.JsonUtil;
 import org.apache.hertzbeat.manager.pojo.dto.LoginDto;
 import org.apache.hertzbeat.manager.pojo.dto.RefreshTokenResponse;
 import org.apache.hertzbeat.manager.security.dto.LoginResult;
+import org.apache.hertzbeat.manager.security.dto.UserAuthInfo;
+import org.apache.hertzbeat.manager.security.model.SysUser;
 import org.apache.hertzbeat.manager.security.result.Result;
 import org.apache.hertzbeat.manager.security.service.AuthService;
+import org.apache.hertzbeat.manager.security.service.SysUserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -54,6 +60,7 @@ public class AccountController {
      * Token validity time in seconds
      */
     private final AuthService authService;
+    private final SysUserService sysUserService;
     private static final long PERIOD_TIME = 3600L;
     /**
      * account data provider
@@ -132,5 +139,11 @@ public class AccountController {
 //        customClaimMap.put("refresh", true);
 //        return JsonWebTokenUtil.issueJwt(userId, expirationMillis, roles, customClaimMap);
         return null;
+    }
+    @Operation(summary = "获取当前登录用户信息")
+    @GetMapping("/me")
+    public Result<SysUser> getCurrentUserInfo() {
+        SysUser userInfoVO = sysUserService.getCurrentUserInfo();
+        return Result.success(userInfoVO);
     }
 }

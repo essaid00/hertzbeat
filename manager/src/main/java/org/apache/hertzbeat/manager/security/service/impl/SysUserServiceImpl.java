@@ -7,6 +7,7 @@ import org.apache.hertzbeat.manager.security.dao.UserDao;
 import org.apache.hertzbeat.manager.security.dto.UserAuthInfo;
 import org.apache.hertzbeat.manager.security.model.SysUser;
 import org.apache.hertzbeat.manager.security.service.SysUserService;
+import org.apache.hertzbeat.manager.security.util.SecurityUtils;
 import org.bouncycastle.util.Arrays;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -45,5 +46,31 @@ public class SysUserServiceImpl  implements SysUserService {
 
         }
         return userAuthInfo;
+    }
+
+    @Override
+    public SysUser getUserByName(String username) {
+        return null;
+    }
+
+    @Override
+    public SysUser getCurrentUserInfo() {
+        String username = SecurityUtils.getUsername();
+
+        // 获取登录用户基础信息
+
+        // entity->VO
+        SysUser userInfoVO = userDao.getUserByUsername(username);
+
+        // 用户角色集合
+        Set<String> roles = SecurityUtils.getRoles();
+        userInfoVO.setRoles(roles);
+        userInfoVO.setPassword("");
+        // 用户权限集合
+        if (CollectionUtil.isNotEmpty(roles)) {
+            Set<String> perms =new HashSet<>();
+            userInfoVO.setPerms(perms);
+        }
+        return userInfoVO;
     }
 }
