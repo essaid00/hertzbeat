@@ -35,8 +35,7 @@
       "name": "collector.dispatch.entrance.netty.enabled",
       "type": "java.lang.Boolean",
       "description": "whether netty scheduling is started",
-      "sourceType": "org.apache.hertzbeat.collector.dispatch.DispatchProperties$EntranceProperties$NettyProperties",
-      "defaultValue": false
+      "sourceType": "org.apache.hertzbeat.collector.dispatch.DispatchProperties$EntranceProperties$NettyProperties"
     },
     {
       "name": "collector.dispatch.entrance.netty.identity",
@@ -54,8 +53,7 @@
       "name": "collector.dispatch.entrance.netty.manager-port",
       "type": "java.lang.Integer",
       "description": "connect cluster master port",
-      "sourceType": "org.apache.hertzbeat.collector.dispatch.DispatchProperties$EntranceProperties$NettyProperties",
-      "defaultValue": 1158
+      "sourceType": "org.apache.hertzbeat.collector.dispatch.DispatchProperties$EntranceProperties$NettyProperties"
     },
     {
       "name": "collector.dispatch.entrance.netty.mode",
@@ -67,15 +65,13 @@
       "name": "collector.dispatch.export.kafka.enabled",
       "type": "java.lang.Boolean",
       "description": "Whether the kafka data export is started kafka数据出口是否启动",
-      "sourceType": "org.apache.hertzbeat.collector.dispatch.DispatchProperties$ExportProperties$KafkaProperties",
-      "defaultValue": true
+      "sourceType": "org.apache.hertzbeat.collector.dispatch.DispatchProperties$ExportProperties$KafkaProperties"
     },
     {
       "name": "collector.dispatch.export.kafka.servers",
       "type": "java.lang.String",
       "description": "kafka's connection server url kafka的连接服务器url",
-      "sourceType": "org.apache.hertzbeat.collector.dispatch.DispatchProperties$ExportProperties$KafkaProperties",
-      "defaultValue": "http:\/\/127.0.0.1:2379"
+      "sourceType": "org.apache.hertzbeat.collector.dispatch.DispatchProperties$ExportProperties$KafkaProperties"
     },
     {
       "name": "collector.dispatch.export.kafka.topic",

@@ -21,29 +21,25 @@
       "name": "alerter.console-url",
       "type": "java.lang.String",
       "description": "Alarm content console link",
-      "sourceType": "org.apache.hertzbeat.alert.AlerterProperties",
-      "defaultValue": "https:\/\/console.tancloud.cn"
+      "sourceType": "org.apache.hertzbeat.alert.AlerterProperties"
     },
     {
       "name": "alerter.ding-talk-webhook-url",
       "type": "java.lang.String",
       "description": "DingDing talk webhook url",
-      "sourceType": "org.apache.hertzbeat.alert.AlerterProperties",
-      "defaultValue": "https:\/\/oapi.dingtalk.com\/robot\/send?access_token="
+      "sourceType": "org.apache.hertzbeat.alert.AlerterProperties"
     },
     {
       "name": "alerter.discord-webhook-url",
       "type": "java.lang.String",
       "description": "Discord Notify url",
-      "sourceType": "org.apache.hertzbeat.alert.AlerterProperties",
-      "defaultValue": "https:\/\/discord.com\/api\/v9\/channels\/%s\/messages"
+      "sourceType": "org.apache.hertzbeat.alert.AlerterProperties"
     },
     {
       "name": "alerter.entrance.kafka.enabled",
       "type": "java.lang.Boolean",
       "description": "Whether the kafka data entry is started",
-      "sourceType": "org.apache.hertzbeat.alert.AlerterProperties$EntranceProperties$KafkaProperties",
-      "defaultValue": true
+      "sourceType": "org.apache.hertzbeat.alert.AlerterProperties$EntranceProperties$KafkaProperties"
     },
     {
       "name": "alerter.entrance.kafka.group-id",
@@ -55,8 +51,7 @@
       "name": "alerter.entrance.kafka.servers",
       "type": "java.lang.String",
       "description": "kafka's connection server url",
-      "sourceType": "org.apache.hertzbeat.alert.AlerterProperties$EntranceProperties$KafkaProperties",
-      "defaultValue": "127.0.0.1:9092"
+      "sourceType": "org.apache.hertzbeat.alert.AlerterProperties$EntranceProperties$KafkaProperties"
     },
     {
       "name": "alerter.entrance.kafka.topic",
@@ -68,36 +63,31 @@
       "name": "alerter.fly-book-webhook-url",
       "type": "java.lang.String",
       "description": "FlyBook webhook url",
-      "sourceType": "org.apache.hertzbeat.alert.AlerterProperties",
-      "defaultValue": "https:\/\/open.feishu.cn\/open-apis\/bot\/v2\/hook\/"
+      "sourceType": "org.apache.hertzbeat.alert.AlerterProperties"
     },
     {
       "name": "alerter.gotify-webhook-url",
       "type": "java.lang.String",
       "description": "Gotify Notify url",
-      "sourceType": "org.apache.hertzbeat.alert.AlerterProperties",
-      "defaultValue": "https:\/\/push.example.de\/message?token="
+      "sourceType": "org.apache.hertzbeat.alert.AlerterProperties"
     },
     {
       "name": "alerter.server-chan-webhook-url",
       "type": "java.lang.String",
       "description": "ServerChan Notify url",
-      "sourceType": "org.apache.hertzbeat.alert.AlerterProperties",
-      "defaultValue": "https:\/\/sctapi.ftqq.com\/%s.send"
+      "sourceType": "org.apache.hertzbeat.alert.AlerterProperties"
     },
     {
       "name": "alerter.telegram-webhook-url",
       "type": "java.lang.String",
       "description": "Telegram Bot api url",
-      "sourceType": "org.apache.hertzbeat.alert.AlerterProperties",
-      "defaultValue": "https:\/\/api.telegram.org\/bot%s\/sendMessage"
+      "sourceType": "org.apache.hertzbeat.alert.AlerterProperties"
     },
     {
       "name": "alerter.we-work-webhook-url",
       "type": "java.lang.String",
       "description": "WeWork webhook url",
-      "sourceType": "org.apache.hertzbeat.alert.AlerterProperties",
-      "defaultValue": "https:\/\/qyapi.weixin.qq.com\/cgi-bin\/webhook\/send?key="
+      "sourceType": "org.apache.hertzbeat.alert.AlerterProperties"
     }
   ],
   "hints": []
