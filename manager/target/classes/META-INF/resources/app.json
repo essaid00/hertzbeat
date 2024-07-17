@@ -10,212 +10,213 @@
   },
   "menu": [
     {
-      "text": "Guide",
+      "title": "home",
       "i18n": "menu.main",
+      "icon": "mdi-home",
       "group": true,
       "hideInBreadcrumb": true,
-      "children": [
+      "options": [
         {
-          "text": "Dashboard",
+          "title": "Dashboard",
           "i18n": "menu.dashboard",
           "icon": "anticon-dashboard",
-          "link": "/dashboard"
+          "to": "home"
         }
       ]
     },
     {
       "key": "monitoring",
-      "text": "Monitoring",
+      "title": "Monitoring",
       "i18n": "menu.monitor",
       "group": true,
       "hideInBreadcrumb": true,
-      "children": [
+      "options": [
         {
-          "text": "Monitor-center",
+          "title": "Monitor-center",
           "i18n": "menu.monitor.center",
           "icon": "anticon-laptop",
-          "link": "/monitors"
+          "to": "/monitors"
         },
         {
-          "text": "Define",
+          "title": "Define",
           "i18n": "menu.advanced.define",
           "icon": "anticon-code",
-          "link": "/setting/define"
+          "to": "/setting/define"
         },
         {
-          "text": "Prometheus",
+          "title": "Prometheus",
           "i18n": "menu.monitor.prometheus",
           "icon": "anticon-insert-row-below",
-          "link": "/monitors?app=prometheus"
+          "to": "/monitors?app=prometheus"
         },
         {
           "key": "service",
-          "text": "Service",
+          "title": "Service",
           "i18n": "menu.monitor.service",
           "icon": "anticon-appstore"
         },
         {
           "key": "program",
-          "text": "Program",
+          "title": "Program",
           "i18n": "menu.monitor.program",
           "icon": "anticon-code"
         },
         {
           "key": "db",
-          "text": "Database",
+          "title": "Database",
           "i18n": "menu.monitor.db",
           "icon": "anticon-console-sql"
         },
         {
           "key": "cache",
-          "text": "Cache",
+          "title": "Cache",
           "i18n": "menu.monitor.cache",
           "icon": "anticon-group"
         },
         {
           "key": "os",
-          "text": "OS",
+          "title": "OS",
           "hide": false,
           "i18n": "menu.monitor.os",
           "icon": "anticon-windows"
         },
         {
           "key": "mid",
-          "text": "Middleware",
+          "title": "Middleware",
           "hide": false,
           "i18n": "menu.monitor.mid",
           "icon": "anticon-cluster"
         },
         {
           "key": "bigdata",
-          "text": "Bigdata",
+          "title": "Bigdata",
           "hide": false,
           "i18n": "menu.monitor.bigdata",
           "icon": "anticon-dot-chart"
         },
         {
           "key": "webserver",
-          "text": "WebServer",
+          "title": "WebServer",
           "hide": false,
           "i18n": "menu.monitor.webserver",
           "icon": "anticon-database"
         },
         {
           "key": "cn",
-          "text": "CNCF",
+          "title": "CNCF",
           "hide": false,
           "i18n": "menu.monitor.cn",
           "icon": "anticon-cloud-server"
         },
         {
           "key": "network",
-          "text": "Network",
+          "title": "Network",
           "hide": false,
           "i18n": "menu.monitor.network",
           "icon": "anticon-global"
         },
         {
           "key": "server",
-          "text": "Server",
+          "title": "Server",
           "hide": false,
           "i18n": "menu.monitor.server",
           "icon": "anticon-hdd"
         },
         {
           "key": "llm",
-          "text": "AiLLM",
+          "title": "AiLLM",
           "hide": false,
           "i18n": "menu.monitor.llm",
           "icon": "anticon-partition"
         },
         {
           "key": "custom",
-          "text": "Custom",
+          "title": "Custom",
           "i18n": "menu.monitor.custom",
           "icon": "anticon-project"
         }
       ]
     },
     {
-      "text": "Alarm",
+      "title": "Alarm",
       "i18n": "menu.alert",
       "group": true,
       "hideInBreadcrumb": true,
-      "children": [
+      "options": [
         {
-          "text": "Threshold",
+          "title": "Threshold",
           "i18n": "menu.alert.setting",
           "icon": "anticon-calculator",
-          "link": "/alert/setting"
+          "to": "/alert/setting"
         },
         {
-          "text": "Converge",
+          "title": "Converge",
           "i18n": "menu.alert.converge",
           "icon": "anticon-filter",
-          "link": "/alert/converge"
+          "to": "/alert/converge"
         },
         {
-          "text": "Silence",
+          "title": "Silence",
           "i18n": "menu.alert.silence",
           "icon": "anticon-audio-muted",
-          "link": "/alert/silence"
+          "to": "/alert/silence"
         },
         {
-          "text": "Center",
+          "title": "Center",
           "i18n": "menu.alert.center",
           "icon": "anticon-alert",
-          "link": "/alert/center"
+          "to": "/alert/center"
         },
         {
-          "text": "Notice",
+          "title": "Notice",
           "i18n": "menu.alert.dispatch",
           "icon": "anticon-notification",
-          "link": "/alert/notice"
+          "to": "/alert/notice"
         }
       ]
     },
     {
-      "text": "Advanced",
+      "title": "Advanced",
       "i18n": "menu.advanced",
       "group": true,
       "hideInBreadcrumb": true,
-      "children": [
+      "options": [
         {
-          "text": "status",
+          "title": "status",
           "i18n": "menu.advanced.status",
           "icon": "anticon-mobile",
-          "link": "/setting/status",
+          "to": "/setting/status",
           "badgeDot": true,
           "badge": 1
         },
         {
-          "text": "collector",
+          "title": "collector",
           "i18n": "menu.advanced.collector",
           "icon": "anticon-cluster",
-          "link": "/setting/collector"
+          "to": "/setting/collector"
         },
         {
-          "text": "tags",
+          "title": "tags",
           "i18n": "menu.advanced.tags",
           "icon": "anticon-tags",
-          "link": "/setting/tags"
+          "to": "/setting/tags"
         }
       ]
     },
     {
-      "text": "More",
+      "title": "More",
       "i18n": "menu.extras",
       "group": true,
       "hideInBreadcrumb": true,
-      "children": [
+      "options": [
         {
-          "text": "settings",
+          "title": "settings",
           "i18n": "menu.extras.settings",
           "icon": "anticon-setting",
-          "link": "/setting/settings"
+          "to": "/setting/settings"
         },
         {
-          "text": "helpCenter",
+          "title": "helpCenter",
           "externalLink": "https://hertzbeat.apache.org/docs/help/guide",
           "target": "_blank",
           "i18n": "menu.extras.help",
