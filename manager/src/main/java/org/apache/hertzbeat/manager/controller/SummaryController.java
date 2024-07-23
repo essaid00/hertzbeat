@@ -21,9 +21,13 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import java.util.List;
+import java.util.stream.Collectors;
+
 import org.apache.hertzbeat.common.entity.dto.Message;
 import org.apache.hertzbeat.manager.pojo.dto.AppCount;
+import org.apache.hertzbeat.manager.pojo.dto.AppSummary;
 import org.apache.hertzbeat.manager.pojo.dto.Dashboard;
+import org.apache.hertzbeat.manager.pojo.dto.DashboardV1;
 import org.apache.hertzbeat.manager.service.MonitorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -49,4 +53,25 @@ public class SummaryController {
         Message<Dashboard> message = Message.success(new Dashboard(appsCount));
         return ResponseEntity.ok(message);
     }
+
+
+
+@GetMapping(path = "/v1", produces = {APPLICATION_JSON_VALUE})
+@Operation(summary = "Query all application category monitoring statistics", description = "Query all application category monitoring statistics")
+public ResponseEntity<Message<DashboardV1>> appMonitors2() {
+    List<AppCount> appsCounts = monitorService.getAllAppMonitorsCount();
+    List<AppSummary> appsCount = monitorService.getAllAppMonitorsCount()
+            .stream().map((ob)-> new AppSummary(
+                    ob.getApp(),
+                    ob.getCategory(),
+                    (int) ob.getSize()
+
+            ))
+            .collect(Collectors.toList());
+
+
+    Message<DashboardV1> message = Message.success(new DashboardV1(appsCount,"title"));
+    return ResponseEntity.ok(message);
+}
+
 }
