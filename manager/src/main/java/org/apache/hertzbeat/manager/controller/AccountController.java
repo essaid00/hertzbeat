@@ -146,4 +146,10 @@ public class AccountController {
         SysUser userInfoVO = sysUserService.getCurrentUserInfo();
         return Result.success(userInfoVO);
     }
+    @Operation(summary = "logout")
+    @PostMapping("/logout")
+    public Result logout() {
+        authService.logout();
+        return Result.success();
+    }
 }

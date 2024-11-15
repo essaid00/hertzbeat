@@ -1,0 +1,237 @@
+{
+  "app": {
+    "name": "HertzBeat",
+    "description": " A real-time monitoring system with agentless, performance cluster, prometheus-compatible, custom monitoring and status page building capabilities."
+  },
+  "user": {
+    "name": "Admin",
+    "avatar": "./assets/img/avatar.svg",
+    "email": "Administrator",
+    "icon": "dashboard"
+  },
+  "menu": [
+    {
+      "title": "Guide",
+      "icon": "dashboard",
+      "i18n": "menu.main",
+      "group": true,
+      "hideInBreadcrumb": true,
+      "separatorBefore": true,
+      "options": [
+        {
+          "title": "Dashboard",
+          "i18n": "menu.dashboard",
+          "icon": "anticon-dashboard",
+          "to": "home",
+          "separatorBefore": true
+        }
+      ]
+    },
+    {
+      "key": "monitoring",
+      "title": "Monitoring",
+      "i18n": "menu.monitor",
+      "group": true,
+      "hideInBreadcrumb": true,
+      "icon": "laptop",
+      "separatorBefore": true,
+      "options": [
+        {
+          "title": "Monitor-center",
+          "i18n": "menu.monitor.center",
+          "separatorBefore": false,
+          "icon": "laptop",
+          "separatorAfter": true,
+          "to": "monitors"
+        },
+        {
+          "title": "Define",
+          "i18n": "menu.advanced.define",
+          "icon": "anticon-code",
+          "to": "/setting/define"
+        },
+        {
+          "title": "Prometheus",
+          "i18n": "menu.monitor.prometheus",
+          "icon": "anticon-insert-row-below",
+          "to": "/monitors?app=prometheus"
+        },
+        {
+          "key": "service",
+          "title": "Service",
+          "i18n": "menu.monitor.service",
+          "icon": "anticon-appstore"
+        },
+        {
+          "key": "program",
+          "title": "Program",
+          "i18n": "menu.monitor.program",
+          "icon": "anticon-code"
+        },
+        {
+          "key": "db",
+          "title": "Database",
+          "i18n": "menu.monitor.db",
+          "icon": "anticon-console-sql"
+        },
+        {
+          "key": "cache",
+          "title": "Cache",
+          "i18n": "menu.monitor.cache",
+          "icon": "anticon-group"
+        },
+        {
+          "key": "os",
+          "title": "OS",
+          "hide": false,
+          "i18n": "menu.monitor.os",
+          "icon": "anticon-windows"
+        },
+        {
+          "key": "mid",
+          "title": "Middleware",
+          "hide": false,
+          "i18n": "menu.monitor.mid",
+          "icon": "anticon-cluster"
+        },
+        {
+          "key": "bigdata",
+          "title": "Bigdata",
+          "hide": false,
+          "i18n": "menu.monitor.bigdata",
+          "icon": "anticon-dot-chart"
+        },
+        {
+          "key": "webserver",
+          "title": "WebServer",
+          "hide": false,
+          "i18n": "menu.monitor.webserver",
+          "icon": "anticon-database"
+        },
+        {
+          "key": "cn",
+          "title": "CNCF",
+          "hide": false,
+          "i18n": "menu.monitor.cn",
+          "icon": "anticon-cloud-server"
+        },
+        {
+          "key": "network",
+          "title": "Network",
+          "hide": false,
+          "i18n": "menu.monitor.network",
+          "icon": "anticon-global"
+        },
+        {
+          "key": "server",
+          "title": "Server",
+          "hide": false,
+          "i18n": "menu.monitor.server",
+          "icon": "anticon-hdd"
+        },
+        {
+          "key": "llm",
+          "title": "AiLLM",
+          "hide": false,
+          "i18n": "menu.monitor.llm",
+          "icon": "anticon-partition"
+        },
+        {
+          "key": "custom",
+          "title": "Custom",
+          "i18n": "menu.monitor.custom",
+          "icon": "anticon-project"
+        }
+      ]
+    },
+    {
+      "title": "Alarm",
+      "i18n": "menu.alert",
+      "group": true,
+      "hideInBreadcrumb": true,
+      "options": [
+        {
+          "title": "Threshold",
+          "i18n": "menu.alert.setting",
+          "icon": "anticon-calculator",
+          "to": "/alert/setting",
+          "separatorBefore": true
+        },
+        {
+          "title": "Converge",
+          "i18n": "menu.alert.converge",
+          "icon": "anticon-filter",
+          "to": "/alert/converge",
+          "separatorBefore": true
+        },
+        {
+          "title": "Silence",
+          "i18n": "menu.alert.silence",
+          "icon": "anticon-audio-muted",
+          "to": "/alert/silence"
+        },
+        {
+          "title": "Center",
+          "i18n": "menu.alert.center",
+          "icon": "anticon-alert",
+          "to": "/alert/center"
+        },
+        {
+          "title": "Notice",
+          "i18n": "menu.alert.dispatch",
+          "icon": "anticon-notification",
+          "to": "/alert/notice"
+        }
+      ]
+    },
+    {
+      "title": "Advanced",
+      "i18n": "menu.advanced",
+      "group": true,
+      "hideInBreadcrumb": true,
+      "options": [
+        {
+          "title": "status",
+          "i18n": "menu.advanced.status",
+          "icon": "anticon-mobile",
+          "to": "/setting/status",
+          "badgeDot": true,
+          "badge": 1
+        },
+        {
+          "title": "collector",
+          "i18n": "menu.advanced.collector",
+          "icon": "anticon-cluster",
+          "to": "/setting/collector"
+        },
+        {
+          "title": "tags",
+          "i18n": "menu.advanced.tags",
+          "icon": "anticon-tags",
+          "to": "/setting/tags"
+        }
+      ]
+    },
+    {
+      "title": "More",
+      "i18n": "menu.extras",
+      "group": true,
+      "hideInBreadcrumb": true,
+      "options": [
+        {
+          "title": "settings",
+          "i18n": "menu.extras.settings",
+          "icon": "anticon-setting",
+          "to": "/setting/settings"
+        },
+        {
+          "title": "helpCenter",
+          "externalto": "https://hertzbeat.apache.org/docs/help/guide",
+          "target": "_blank",
+          "i18n": "menu.extras.help",
+          "icon": "anticon-global"
+        }
+      ]
+    }
+  ]
+}

@@ -35,7 +35,7 @@ public enum ResultCode implements IResultCode, Serializable {
     VERIFY_CODE_TIMEOUT("A0213", "验证码已过期"),
     VERIFY_CODE_ERROR("A0214", "验证码错误"),
 
-    TOKEN_INVALID("A0230", "token无效或已过期"),
+    TOKEN_INVALID("A0230", "TOKEN is INVALID"),
     TOKEN_ACCESS_FORBIDDEN("A0231", "token已被禁止访问"),
 
     AUTHORIZED_ERROR("A0300", "访问权限异常"),
